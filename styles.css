@@ -317,7 +317,7 @@ header{
   left: 20%;
   top: 68%;
   transform: translate(0%, -50%); 
-  user-select: none; /* -- Prevent image highlighting -- */
+  user-select: none;
 }
 
 #image-track > .image {
@@ -327,7 +327,6 @@ header{
   object-position: 54% center;
 }
 
-/* -- YouTube Link Styles -- */
 
 body.menu-toggled > .meta-link > span {
   color: rgb(30, 30, 30);
@@ -347,6 +346,7 @@ body.menu-toggled > .meta-link > span {
 
 .meta-link {
   align-items: center;
+  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -378,4 +378,25 @@ body.menu-toggled > .meta-link > span {
   color: white;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+}
+
+@media (max-width: 767px){
+  .hidden-md-up{
+    display: none;
+  }
+  .mainTitle{
+    font-size: 30px;
+  }
+  nav{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-link-image{
+    display: none;
+  }
+  .right{
+    background: #fff;
+  }
+  
 }
